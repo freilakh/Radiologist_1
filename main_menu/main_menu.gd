@@ -6,12 +6,13 @@ extends Control
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/exit_button as Button
 @onready var option_menu = $option_menu as OptionMenu
 @onready var margin_container = $MarginContainer as MarginContainer
-#@export var Start_level = preload() as PackedScene здесь загрузим первый уровень, пока пусто
+@onready var first_level = preload("res://first_level/first_level.tscn") as PackedScene
+
 func _ready():
 	handle_connections()
 	
 func on_start_pressed() -> void:
-	pass #здесь загрузим первый уровень
+	get_tree().change_scene_to_packed(first_level)
 
 func on_options_pressed() -> void:
 	margin_container.visible = false
@@ -23,6 +24,7 @@ func on_exit_pressed() -> void:
 func on_exit_options_menu() -> void:
 	margin_container.visible = true
 	option_menu.visible = false
+
 func handle_connections() -> void:
 	start_button.button_down.connect(on_start_pressed)
 	option_button.button_down.connect(on_options_pressed)	
