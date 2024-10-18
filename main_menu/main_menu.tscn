@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://jwlhjewyq1e2"]
+[gd_scene load_steps=5 format=3 uid="uid://jwlhjewyq1e2"]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_aigl0"]
 [ext_resource type="Texture2D" uid="uid://cfwdilpt10qvw" path="res://main_menu/photo_5336938779216302636_y (1).jpg" id="1_mex36"]
 [ext_resource type="PackedScene" uid="uid://csjgxsako2y18" path="res://option menu/option_menu.tscn" id="3_nsr0v"]
+[ext_resource type="PackedScene" uid="uid://dcs2kd44lteax" path="res://first_level/first_level.tscn" id="4_tt0ip"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -78,5 +79,9 @@ layout_mode = 2
 text = "выход"
 
 [node name="option_menu" parent="." instance=ExtResource("3_nsr0v")]
+visible = false
+layout_mode = 1
+
+[node name="first_level" parent="." instance=ExtResource("4_tt0ip")]
 visible = false
 layout_mode = 1

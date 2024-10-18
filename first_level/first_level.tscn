@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcs2kd44lteax"]
+
+[ext_resource type="Texture2D" uid="uid://dawvgpxf3cjov" path="res://first_level/5224721342585235115.jpg" id="1_4frlr"]
+[ext_resource type="Texture2D" uid="uid://eaiy5i8hdhcc" path="res://first_level/5224721342585235249.jpg" id="2_tlrn8"]
+[ext_resource type="Texture2D" uid="uid://cs6cnxfreui0f" path="res://first_level/Без названия39_20241009154024 (1).png" id="3_4vddj"]
+[ext_resource type="Texture2D" uid="uid://0cdyvem7ovrc" path="res://first_level/IMG_1280.png" id="3_hx3bk"]
+[ext_resource type="Texture2D" uid="uid://dewcsf8csqm75" path="res://first_level/IMG_1870.PNG" id="4_dmul0"]
+[ext_resource type="Texture2D" uid="uid://bdvugtfrt7c6w" path="res://first_level/Снимок экрана 2024-09-26 213251.png" id="5_no76g"]
+[ext_resource type="Texture2D" uid="uid://dknqtr4exuuet" path="res://first_level/photo_5467407997199312098_y-Photoroom.png" id="6_lbbp4"]
+
+[node name="first_level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4frlr")
+
+[node name="отступ_на_1_пиксель_от_границы" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="отступ_на_1_пиксель_от_границы"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="нижняя панель" type="Sprite2D" parent="отступ_на_1_пиксель_от_границы"]
+position = Vector2(990, 1040)
+scale = Vector2(2.98303, 1.75943)
+texture = ExtResource("2_tlrn8")
+
+[node name="значок_радиации" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 994.0
+offset_right = 164.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("3_4vddj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="значок_танка" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 994.0
+offset_right = 1119.0
+offset_bottom = 1078.0
+texture_normal = ExtResource("3_hx3bk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ввод_ответа" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 999.0
+offset_right = 947.0
+offset_bottom = 1078.0
+theme_override_font_sizes/font_size = 42
+
+[node name="медуза" type="Sprite2D" parent="."]
+position = Vector2(648, 635)
+scale = Vector2(0.265625, 0.292358)
+texture = ExtResource("4_dmul0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 1208.0
+offset_top = 174.0
+offset_right = 1766.0
+offset_bottom = 804.0
+
+[node name="снимок" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(283.5, 317)
+scale = Vector2(2.42358, 2.36576)
+texture = ExtResource("5_no76g")
+
+[node name="опухоль" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(407.625, 325.5)
+scale = Vector2(0.37389, 0.354393)
+texture = ExtResource("6_lbbp4")
+
+[node name="Line2D" type="Line2D" parent="PanelContainer"]
+width = 5.0
