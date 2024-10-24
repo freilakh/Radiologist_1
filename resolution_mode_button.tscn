@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhppnh20rm7jm"]
+
+[ext_resource type="PackedScene" uid="uid://k1glgs0yo68a" path="res://option_display_button.tscn" id="1_lq76c"]
+[ext_resource type="Script" path="res://resolution_mode_button.gd" id="2_fq7nr"]
+
+[node name="Resolution_Mode_button" instance=ExtResource("1_lq76c")]
+custom_minimum_size = Vector2(256, 64)
+script = ExtResource("2_fq7nr")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+custom_minimum_size = Vector2(264, 64)
+text = "РАЗРЕШЕНИЕ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" parent="HBoxContainer" index="1"]
+theme_override_constants/separation = 100
+
+[node name="OptionButton" parent="HBoxContainer" index="2"]
+size_flags_vertical = 4

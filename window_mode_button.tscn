@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu8vba3sem037"]
+
+[ext_resource type="PackedScene" uid="uid://k1glgs0yo68a" path="res://option_display_button.tscn" id="1_eu7ma"]
+[ext_resource type="Script" path="res://window_mode_button.gd" id="2_2n58b"]
+
+[node name="Window_Mode_Button" instance=ExtResource("1_eu7ma")]
+script = ExtResource("2_2n58b")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+custom_minimum_size = Vector2(264, 64)
+text = "РЕЖИМ ЭКРАНА"

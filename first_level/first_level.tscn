@@ -75,7 +75,7 @@ offset_bottom = 1078.0
 theme_override_font_sizes/font_size = 42
 
 [node name="медуза" type="Sprite2D" parent="."]
-position = Vector2(648, 635)
+position = Vector2(602, 768)
 scale = Vector2(0.265625, 0.292358)
 texture = ExtResource("4_dmul0")
 
@@ -98,3 +98,19 @@ texture = ExtResource("6_lbbp4")
 
 [node name="Line2D" type="Line2D" parent="PanelContainer"]
 width = 5.0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 434.0
+offset_bottom = 995.0
+current_tab = 0
+
+[node name="информация о нациенте" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="настройки" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
