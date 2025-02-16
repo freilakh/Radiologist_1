@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cabutt34jb26y"]
+
+[ext_resource type="Script" path="res://draw_tut/drawtut.gd" id="1_asvkf"]
+
+[node name="drawtut" type="Node2D"]
+script = ExtResource("1_asvkf")

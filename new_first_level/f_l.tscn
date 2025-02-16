@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://c83anubwki14x"]
+
+[ext_resource type="Texture2D" uid="uid://dawvgpxf3cjov" path="res://first_level/5224721342585235115.jpg" id="2_d35i1"]
+[ext_resource type="PackedScene" uid="uid://cabutt34jb26y" path="res://draw_tut/drawtut.tscn" id="3_tu6mo"]
+
+[node name="f_l" type="Node2D"]
+
+[node name="drawtut" parent="." instance=ExtResource("3_tu6mo")]
+
+[node name="Line2D" type="Line2D" parent="drawtut"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1980.0
+offset_bottom = 1080.0
+texture = ExtResource("2_d35i1")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect"]
+layout_mode = 2
+offset_left = 26.0
+offset_top = 954.0
+offset_right = 958.0
+offset_bottom = 1066.0

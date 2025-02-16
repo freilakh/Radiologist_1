@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://jwlhjewyq1e2"]
+[gd_scene load_steps=6 format=3 uid="uid://jwlhjewyq1e2"]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_aigl0"]
 [ext_resource type="Texture2D" uid="uid://cfwdilpt10qvw" path="res://main_menu/photo_5336938779216302636_y (1).jpg" id="1_mex36"]
 [ext_resource type="PackedScene" uid="uid://csjgxsako2y18" path="res://option menu/option_menu.tscn" id="3_nsr0v"]
+[ext_resource type="PackedScene" uid="uid://dcs2kd44lteax" path="res://first_level/first_level.tscn" id="4_tt0ip"]
+[ext_resource type="AudioStream" uid="uid://b40fopwh0gdse" path="res://main_menu/vvvvvvvvvvvvvvvvv (1).mp3" id="5_ndcb6"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -59,24 +61,38 @@ layout_mode = 2
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="separater2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="separater" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(350, 90)
 layout_mode = 2
-text = "старт"
+theme_override_font_sizes/font_size = 42
+text = "СТАРТ"
 
 [node name="option_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
-text = "настройки"
+theme_override_font_sizes/font_size = 42
+text = "НАСТРОЙКИ"
 
 [node name="exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
-text = "выход"
+theme_override_font_sizes/font_size = 42
+text = "ВЫХОД"
 
 [node name="option_menu" parent="." instance=ExtResource("3_nsr0v")]
 visible = false
 layout_mode = 1
+
+[node name="first_level" parent="." instance=ExtResource("4_tt0ip")]
+visible = false
+layout_mode = 1
+
+[node name="MusikPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ndcb6")
+volume_db = 3.0
+autoplay = true
+mix_target = 1
